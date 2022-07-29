@@ -9,6 +9,7 @@ $site         = $konfigurasi->listing();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src 'self' https://ajaib.rcdevgames.net/">
   <title><?php echo $title ?></title>
   <!-- Favicons -->
   <link href="<?php echo icon() ?>" rel="icon">
