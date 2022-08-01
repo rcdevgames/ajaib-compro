@@ -127,3 +127,31 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+#-------------------------
+# Upload File
+#-------------------------
+assets/upload/client/*
+assets/upload/client/thumbs/*
+!assets/upload/client/index.html
+!assets/upload/client/thumbs/index.html
+
+assets/upload/file/*
+assets/upload/file/thumbs/*
+!assets/upload/file/index.html
+!assets/upload/file/thumbs/index.html
+
+assets/upload/image/*
+assets/upload/image/thumbs/*
+!assets/upload/image/index.html
+!assets/upload/image/thumbs/index.html
+
+assets/upload/staff/*
+assets/upload/staff/thumbs/*
+!assets/upload/staff/index.html
+!assets/upload/staff/thumbs/index.html
+
+assets/upload/user/*
+assets/upload/user/thumbs/*
+!assets/upload/user/index.html
+!assets/upload/user/thumbs/index.html
+
