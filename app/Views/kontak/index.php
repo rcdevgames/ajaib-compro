@@ -39,6 +39,7 @@
                 <div class="info-box">
                   <i class="bx bx-map"></i>
                   <h3>Alamat Kami:</h3>
+                  <p><strong><?php echo nl2br($konfigurasi['namaweb']) ?></strong></p>
                   <p><?php echo nl2br($konfigurasi['alamat']) ?></p>
                 </div>
               </div>

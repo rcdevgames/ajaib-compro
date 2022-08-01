@@ -30,24 +30,24 @@ $menu_layanan  = $menu->layanan();
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="<?php echo base_url() ?>">Home</a></li>
+          <!-- <li><a class="nav-link scrollto " href="<?php echo base_url() ?>">Home</a></li> -->
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <?php foreach($menu_profil as $menu_profil) { ?>
               <li><a href="<?php echo base_url('berita/profil/'.$menu_profil['slug_berita']) ?>"><?php echo $menu_profil['judul_berita'] ?></a></li>
               <?php } ?>
-              <li><a href="<?php echo base_url('staff') ?>">Our Team</a></li>
+              <li><a href="<?php echo base_url('staff') ?>">Tim Manajemen</a></li>
             </ul>
           </li>
           
-          <li class="dropdown"><a href="<?php echo base_url('berita') ?>"><span>Berita</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Pusat Informasi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <?php foreach($menu_berita as $menu_berita) { ?>
-              <li><a href="<?php echo base_url('berita/kategori/'.$menu_berita['slug_kategori']) ?>"><?php echo $menu_berita['nama_kategori'] ?></a></li>
-              <?php } ?>
+              <li><a href="<?php echo base_url('berita') ?>">Berita</a></li>
+              <li><a href="<?php echo base_url('galeri') ?>">Galeri</a></li>
+              <li><a href="<?php echo base_url('download') ?>">Download</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Proyek</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <?php foreach($menu_layanan as $menu_layanan) { ?>
               <li><a href="<?php echo base_url('berita/layanan/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>

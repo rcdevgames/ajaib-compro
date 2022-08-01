@@ -37,16 +37,6 @@ echo csrf_field();
 				</div>
 
 				<div class="form-group row">
-					<label class="col-3">Tempat, tanggal lahir</label>
-					<div class="col-3">
-						<input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat lahir" value="<?php echo set_value('tempat_lahir') ?>">
-					</div>
-					<div class="col-3">
-						<input type="text" name="tanggal_lahir" class="form-control" placeholder="dd-mm-yyyy" value="<?php echo set_value('tanggal_lahir') ?>">
-					</div>
-				</div>
-
-				<div class="form-group row">
 					<label class="col-3">Jenis, Status Staff</label>
 					<div class="col-3">
 						<select name="id_kategori_staff" class="form-control">
@@ -84,13 +74,6 @@ echo csrf_field();
 						<input type="text" name="website" class="form-control" placeholder="Website" value="<?php echo set_value('website') ?>">
 					</div>
 					
-				</div>
-
-				<div class="form-group row">
-					<label class="col-3">Alamat</label>
-					<div class="col-9">
-						<textarea name="alamat" placeholder="Alamat" class="form-control"><?php echo set_value('alamat') ?></textarea>
-					</div>
 				</div>
 
 				<div class="form-group row">

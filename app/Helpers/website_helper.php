@@ -120,19 +120,6 @@ function checklogin()
 }
 }
 
-// checksiswa
-function checksiswa()
-{
-	helper('url');
-	$session = \Config\Services::session();
-	if($session->get('username_siswa') == "" || $session->get('username_siswa') ==NULL)
-	{
-		echo '<script>';
-		echo 'window.location.href = "'.base_url('signin').'?login=belum";';
-		echo '</script>';
-	}
-}
-
 // tanggal_bulan
 	 function tanggal_id($tanggal)
 	{

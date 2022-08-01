@@ -57,7 +57,6 @@ class Berita extends BaseController
 		$m_berita		= new Berita_model();
 		$konfigurasi 	= $m_konfigurasi->listing();
 		$berita 		= $m_berita->read($slug_berita);
-		print_r($berita);die;
 		// Update hits
 		$data = [ 	'id_berita'	=> $berita['id_berita'],
 					'hits'		=> $berita['hits']+1

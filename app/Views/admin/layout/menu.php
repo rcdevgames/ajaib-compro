@@ -127,7 +127,7 @@ $site         = $konfigurasi->listing();
             </ul>
           </li>
           <!-- Video -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fab fa-youtube"></i>
               <p>Data Video Youtube
@@ -148,14 +148,14 @@ $site         = $konfigurasi->listing();
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <!-- pengguna -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?php echo base_url('admin/client') ?>" class="nav-link">
               <i class="nav-icon fas fa-tasks"></i>
               <p>Clients &amp; Portfolio</p>
             </a>
-          </li>
+          </li> -->
           <!-- Staff -->
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -228,12 +228,12 @@ $site         = $konfigurasi->listing();
             </ul>
           </li>
           <!-- panduan -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?php echo base_url('admin/panduan') ?>" class="nav-link">
               <i class="nav-icon fas fa-file-pdf"></i>
               <p>Panduan &amp; Manual Book</p>
             </a>
-          </li>
+          </li> -->
           <!-- logout -->
           <li class="nav-item">
             <a href="<?php echo base_url('login/logout') ?>" class="nav-link">

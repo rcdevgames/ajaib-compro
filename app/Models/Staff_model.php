@@ -14,9 +14,8 @@ class Staff_model extends Model
     public function listing()
     {
         $builder = $this->db->table('staff');
-        $builder->select('staff.*, kategori_staff.nama_kategori_staff, kategori_staff.slug_kategori_staff, users.nama AS nama_admin');
+        $builder->select('staff.*, kategori_staff.nama_kategori_staff, kategori_staff.slug_kategori_staff');
         $builder->join('kategori_staff','kategori_staff.id_kategori_staff = staff.id_kategori_staff','LEFT');
-        $builder->join('users','users.id_user = staff.id_user','LEFT');
         $builder->orderBy('staff.id_staff','DESC');
         $query = $builder->get();
         return $query->getResultArray();
