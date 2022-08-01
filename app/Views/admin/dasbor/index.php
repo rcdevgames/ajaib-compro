@@ -6,7 +6,7 @@ $m_dasbor = new Dasbor_model();
 <div class="alert alert-info">
 	<h4>Hai <em class="text-warning"><?php echo $session->get('nama') ?></em></h4>
 	<hr>
-	<p>Selamat datang di website <strong><?php echo namaweb() ?></strong>. Website ini adalah sample hasil belajar di Java Web Media <a href="https://javawebmedia.com">www.javawebmedia.com</a>. Semoga bermanfaat yah.</p>
+	<p>Selamat datang di Admin Panel <strong><?php echo namaweb() ?></strong>.</p>
 </div>
 
  <!-- Info boxes -->

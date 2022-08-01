@@ -24,7 +24,7 @@ $menu_layanan  = $menu->layanan();
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"><img src="<?php echo base_url('assets/upload/image/'.$site['logo']) ?>" alt="<?php echo $site['namaweb'] ?>"></a>
+      <a href="<?=base_url()?>" class="logo me-auto"><img src="<?php echo base_url('assets/upload/image/'.$site['logo']) ?>" alt="<?php echo $site['namaweb'] ?>"></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
@@ -54,7 +54,7 @@ $menu_layanan  = $menu->layanan();
               <?php } ?>
             </ul>
           </li>
-         
+          <li><a class="nav-link scrollto" href="<?php echo base_url('client') ?>">Client Kami</a></li>
           <li><a class="nav-link scrollto" href="<?php echo base_url('kontak') ?>">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

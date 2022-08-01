@@ -89,10 +89,6 @@ $site         = $konfigurasi->listing();
           <!-- /.col -->
         </div>
       <?php echo form_close(); ?>
-      <hr>
-      <p class="mb-1 text-center">
-        <a href="<?php echo base_url('login/lupa') ?>">Lupa Password?</a> | <a href="<?php echo base_url() ?>" class="text-center">Home</a>
-      </p>
     </div>
     <!-- /.login-card-body -->
   </div>

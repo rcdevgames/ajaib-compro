@@ -25,6 +25,7 @@ class Staff extends BaseController
 					'konfigurasi'	=> $konfigurasi,
 					'content'		=> 'staff/index'
 				];
+		
 		echo view('layout/wrapper',$data);
 	}
 }
