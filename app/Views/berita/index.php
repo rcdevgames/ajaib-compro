@@ -5,7 +5,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2><?php echo $title ?></h2>
         <ol>
-          <li><a href="<?php echo base_url() ?>">Home</a></li>
+          <li><a href="<?php echo base_url() ?>"><?=ucfirst(strtolower(lang('Global.menuHome')))?></a></li>
           <li><?php echo $title ?></li>
         </ol>
       </div>
@@ -26,8 +26,8 @@
                 <?php echo $berita['ringkasan'] ?>
               </p>
               <p>
-                <a href="<?php echo base_url('berita/read/'.$berita['slug_berita']) ?>" class="btn btn-success">
-                  <i class="fa fa-chevron-right"></i>  Baca...
+                <a href="<?php echo base_url('berita/read/'.$berita['slug_berita']) ?>" class="btn btn-sm btn-success">
+                  <i class="fa fa-chevron-right"></i>  <?=ucfirst(strtolower(lang('Global.newsBtnRead')))?>
                 </a>
               </p>
             </div>

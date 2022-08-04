@@ -7,7 +7,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2><?php echo $title ?></h2>
         <ol>
-          <li><a href="<?php echo base_url() ?>">Home</a></li>
+          <li><a href="<?php echo base_url() ?>"><?=ucfirst(strtolower(lang('Global.menuHome')))?></a></li>
           <li><?php echo $title ?></li>
         </ol>
       </div>
@@ -38,7 +38,7 @@
               <div class="col-md-12">
                 <div class="info-box">
                   <i class="bx bx-map"></i>
-                  <h3>Alamat Kami:</h3>
+                  <h3><?=lang('Global.contactAddress')?></h3>
                   <p><strong><?php echo nl2br($konfigurasi['namaweb']) ?></strong></p>
                   <p><?php echo nl2br($konfigurasi['alamat']) ?></p>
                 </div>
@@ -46,14 +46,14 @@
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
-                  <h3>Email Kami:</h3>
+                  <h3><?=lang('Global.contactEmail')?></h3>
                   <p><?php echo nl2br($konfigurasi['email']) ?></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
-                  <h3>Telepon Kami:</h3>
+                  <h3><?=lang('Global.contactPhone')?></h3>
                   <p><?php echo nl2br($konfigurasi['telepon']) ?></p>
                 </div>
               </div>

@@ -17,9 +17,9 @@ class Staff extends BaseController
 		$konfigurasi 	= $m_konfigurasi->listing();
 		$kategori 		= $m_kategori->listing();
 
-		$data = [	'title'			=> 'Staff Kami',
-					'description'	=> 'Staff Kami '.$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
-					'keywords'		=> 'Staff Kami '.$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
+		$data = [	'title'			=> ucfirst(strtolower(lang('Global.staffTitle'))),
+					'description'	=> ucfirst(strtolower(lang('Global.staffTitle'))).$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
+					'keywords'		=> ucfirst(strtolower(lang('Global.staffTitle'))).$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
 					'kategori'		=> $kategori,
 					'm_staff'		=> $m_staff,
 					'konfigurasi'	=> $konfigurasi,

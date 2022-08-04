@@ -20,6 +20,12 @@ use Psr\Log\LoggerInterface;
 
 class BaseController extends Controller
 {
+	public function __construct()
+	{
+		$this->language = \Config\Services::language();
+		$this->language->setLocale(WEB_LANG);
+		// print_r(WEB_LANG);die;
+	}
 	/**
 	 * An array of helpers to be loaded automatically upon
 	 * class instantiation. These helpers will be available

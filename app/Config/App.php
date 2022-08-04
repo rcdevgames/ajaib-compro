@@ -69,7 +69,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $defaultLocale = 'en';
+	public $defaultLocale = 'id';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -83,7 +83,7 @@ class App extends BaseConfig
 	 *
 	 * @var boolean
 	 */
-	public $negotiateLocale = false;
+	public $negotiateLocale = true;
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -96,7 +96,7 @@ class App extends BaseConfig
 	 *
 	 * @var string[]
 	 */
-	public $supportedLocales = ['en'];
+	public $supportedLocales = ['id','en'];
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -151,7 +151,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler';
+	public $sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -193,7 +193,8 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $sessionSavePath = WRITEPATH . 'session';
+	// public $sessionSavePath = WRITEPATH . 'session';
+	public $sessionSavePath = 'ci_sessions';
 
 	/**
 	 * --------------------------------------------------------------------------

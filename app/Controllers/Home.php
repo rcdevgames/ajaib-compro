@@ -9,7 +9,6 @@ use App\Models\Berita_model;
 
 class Home extends BaseController
 {
-
 	// Homepage
 	public function index()
 	{

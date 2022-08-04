@@ -7,7 +7,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2><?php echo $title ?></h2>
         <ol>
-          <li><a href="<?php echo base_url() ?>">Home</a></li>
+          <li><a href="<?php echo base_url() ?>"><?=ucfirst(strtolower(lang('Global.menuHome')))?></a></li>
           <li><?php echo $title ?></li>
         </ol>
       </div>

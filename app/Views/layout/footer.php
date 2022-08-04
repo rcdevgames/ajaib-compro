@@ -35,7 +35,7 @@ $menu_layanan  = $menu->layanan();
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>About Us</h4>
+            <h4><?=lang('Global.menuProfile')?></h4>
             <ul>
               <?php foreach($menu_profil as $menu_profil) { ?>
               <li><i class="bx bx-chevron-right"></i> <a href="<?php echo base_url('berita/profil/'.$menu_profil['slug_berita']) ?>"><?php echo $menu_profil['judul_berita'] ?></a></li>
@@ -45,7 +45,7 @@ $menu_layanan  = $menu->layanan();
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4><?=lang('Global.menuProject')?></h4>
             <ul>
               <?php foreach($menu_layanan as $menu_layanan) { ?>
               <li><i class="bx bx-chevron-right"></i> <a href="<?php echo base_url('berita/layanan/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>
@@ -54,7 +54,7 @@ $menu_layanan  = $menu->layanan();
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Find Us on Map</h4>
+            <h4><?=lang('Global.footerLocation')?></h4>
             <style type="text/css" media="screen">
               iframe {
                 width: 100%;

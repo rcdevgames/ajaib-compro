@@ -15,7 +15,15 @@ $menu_layanan  = $menu->layanan();
         <i class="fa fa-home"></i> <?php echo tagline(); ?>
       </div>
       <div class="d-flex align-items-center">
-        <i class="fa fa-phone-alt"></i> <?php echo telepon() ?>
+        <!-- <i class="fa fa-phone-alt"></i> <?php echo telepon() ?> -->
+        <a href="<?=base_url('bahasa/id')?>" title="Indonesia" style="color: white;font-family: Roboto, sans-serif; padding-right: 10px;">
+          <img src="<?=base_url('assets/template/assets/img/id.png')?>" style="height: 20px;width: 20px;">
+          ID
+        </a>
+        <a href="<?=base_url('bahasa/en')?>" title="English" style="color: white;font-family: Roboto, sans-serif;">
+          <img src="<?=base_url('assets/template/assets/img/uk.png')?>" style="height: 20px;width: 20px;">
+          EN
+        </a>
       </div>
     </div>
   </div>
@@ -31,31 +39,31 @@ $menu_layanan  = $menu->layanan();
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <!-- <li><a class="nav-link scrollto " href="<?php echo base_url() ?>">Home</a></li> -->
-          <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span><?=lang('Global.menuProfile')?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <?php foreach($menu_profil as $menu_profil) { ?>
               <li><a href="<?php echo base_url('berita/profil/'.$menu_profil['slug_berita']) ?>"><?php echo $menu_profil['judul_berita'] ?></a></li>
               <?php } ?>
-              <li><a href="<?php echo base_url('staff') ?>">Tim Manajemen</a></li>
+              <li><a href="<?php echo base_url('staff') ?>"><?=ucfirst(strtolower(lang('Global.menuTeam')))?></a></li>
             </ul>
           </li>
           
-          <li class="dropdown"><a href="#"><span>Pusat Informasi</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span><?=lang('Global.menuInformation')?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="<?php echo base_url('berita') ?>">Berita</a></li>
-              <li><a href="<?php echo base_url('galeri') ?>">Galeri</a></li>
-              <li><a href="<?php echo base_url('download') ?>">Download</a></li>
+              <li><a href="<?php echo base_url('berita') ?>"><?=ucfirst(strtolower(lang('Global.menuNews')))?></a></li>
+              <li><a href="<?php echo base_url('galeri') ?>"><?=ucfirst(strtolower(lang('Global.menuGalery')))?></a></li>
+              <li><a href="<?php echo base_url('download') ?>"><?=ucfirst(strtolower(lang('Global.menuDownload')))?></a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Proyek</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span><?=lang('Global.menuProject')?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <?php foreach($menu_layanan as $menu_layanan) { ?>
               <li><a href="<?php echo base_url('berita/layanan/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>
               <?php } ?>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="<?php echo base_url('client') ?>">Client Kami</a></li>
-          <li><a class="nav-link scrollto" href="<?php echo base_url('kontak') ?>">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('client') ?>"><?=lang('Global.menuClient')?></a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('kontak') ?>"><?=lang('Global.menuContact')?></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

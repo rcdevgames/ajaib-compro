@@ -17,9 +17,9 @@ class Berita extends BaseController
 		$konfigurasi 	= $m_konfigurasi->listing();
 		$berita 		= $m_berita->home();
 		
-		$data = [	'title'			=> 'Berita '.$konfigurasi['namaweb'],
-					'description'	=> 'Berita '.$konfigurasi['namaweb'],
-					'keywords'		=> 'Berita '.$konfigurasi['namaweb'],
+		$data = [	'title'			=> ucfirst(strtolower(lang('Global.newsTitle'))),
+					'description'	=> ucfirst(strtolower(lang('Global.newsTitle'))).' '.$konfigurasi['namaweb'],
+					'keywords'		=> ucfirst(strtolower(lang('Global.newsTitle'))).' '.$konfigurasi['namaweb'],
 					'berita'		=> $berita,
 					'content'		=> 'berita/index'
 				];

@@ -49,7 +49,7 @@ $sidebar  = $m_berita->sidebar();
                         <?php echo $sidebar['judul_berita'] ?>
                       </a>
                     </h4>
-                    <small class="text-gray-dark"><i class="fa fa-eye"></i> <?php echo $sidebar['hits'] ?> views</small>
+                    <small class="text-gray-dark"><i class="fa fa-eye"></i> <?php echo $sidebar['hits'] ?> <?=ucfirst(strtolower(lang('Global.newsRead')))?></small>
                   </div>
                   <div class="clearfix">
                     <br>

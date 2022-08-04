@@ -58,7 +58,7 @@ $layanan      = $menu->layanan();
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>Selamat datang di <?php echo $konfigurasi['namaweb'] ?></h3>
+          <h3><?=lang('Global.homeWelcome')?> <?php echo $konfigurasi['namaweb'] ?></h3>
           <p><?php echo $konfigurasi['tagline'] ?></p>
         </div>
 
@@ -70,7 +70,7 @@ $layanan      = $menu->layanan();
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About <?php echo $konfigurasi['namaweb'] ?></h2>
+          <h2><?=lang('Global.homeAbout')?> <?php echo $konfigurasi['namaweb'] ?></h2>
          <?php echo $konfigurasi['deskripsi'] ?>
         </div>
 
