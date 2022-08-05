@@ -15,9 +15,9 @@ class Download extends BaseController
 		$konfigurasi 	= $m_konfigurasi->listing();
 		$download 		= $m_download->jenis_download('Download');
 
-		$data = [	'title'			=> 'Download File',
-					'description'	=> 'Download File '.$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
-					'keywords'		=> 'Download File '.$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
+		$data = [	'title'			=> ucfirst(strtolower(lang('Global.downloadTitle'))),
+					'description'	=> ucfirst(strtolower(lang('Global.downloadTitle'))).$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
+					'keywords'		=> ucfirst(strtolower(lang('Global.downloadTitle'))).$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
 					'download'		=> $download,
 					'konfigurasi'	=> $konfigurasi,
 					'content'		=> 'download/index'

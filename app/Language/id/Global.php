@@ -30,4 +30,13 @@ return [
    'newsBtnRead' => 'Baca Selengkapnya',
    'newsMore' => 'Berita Lainnya',
    'newsRead' => 'Lihat',
+   // Galery
+   'galeryTitle' => 'Galeri Gambar',
+   // Download
+   'downloadTitle' => 'Unduh Dokumen',
+   'downloadTTitle' => 'Judul',
+   'downloadTDesc' => 'Keterangan',
+   'downloadTAuthor' => 'Pembuat',
+   'downloadTDownload' => 'Unduh',
+   'downloadTFile' => 'Dokumen',
 ];

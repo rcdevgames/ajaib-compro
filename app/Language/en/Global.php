@@ -30,4 +30,13 @@ return [
    'newsBtnRead' => 'Read More',
    'newsMore' => 'Latest News',
    'newsRead' => 'Views',
+   // Galery
+   'galeryTitle' => 'Image Gallery',
+   // Download
+   'downloadTitle' => 'Download File',
+   'downloadTTitle' => 'Title',
+   'downloadTDesc' => 'Description',
+   'downloadTAuthor' => 'Author',
+   'downloadTDownload' => 'Download',
+   'downloadTFile' => 'File',
 ];

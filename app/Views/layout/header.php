@@ -44,7 +44,7 @@ $menu_layanan  = $menu->layanan();
               <?php foreach($menu_profil as $menu_profil) { ?>
               <li><a href="<?php echo base_url('berita/profil/'.$menu_profil['slug_berita']) ?>"><?php echo $menu_profil['judul_berita'] ?></a></li>
               <?php } ?>
-              <li><a href="<?php echo base_url('staff') ?>"><?=ucfirst(strtolower(lang('Global.menuTeam')))?></a></li>
+              <li><a href="<?php echo base_url('staff') ?>"><?=ucwords(strtolower(lang('Global.menuTeam')))?></a></li>
             </ul>
           </li>
           
@@ -52,7 +52,7 @@ $menu_layanan  = $menu->layanan();
             <ul>
               <li><a href="<?php echo base_url('berita') ?>"><?=ucfirst(strtolower(lang('Global.menuNews')))?></a></li>
               <li><a href="<?php echo base_url('galeri') ?>"><?=ucfirst(strtolower(lang('Global.menuGalery')))?></a></li>
-              <li><a href="<?php echo base_url('download') ?>"><?=ucfirst(strtolower(lang('Global.menuDownload')))?></a></li>
+              <li><a href="<?php echo base_url('download') ?>"><?=ucwords(strtolower(lang('Global.menuDownload')))?></a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span><?=lang('Global.menuProject')?></span> <i class="bi bi-chevron-down"></i></a>

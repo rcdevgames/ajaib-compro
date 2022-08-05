@@ -21,10 +21,10 @@
           <thead>
             <tr>
               <th width="5%">No</th>
-              <th width="30%">Judul</th>
-              <th width="30%">Keterangan</th>
-              <th width="15%">Author</th>
-              <th width="10%">File</th>
+              <th width="30%"><?=ucfirst(strtolower(lang('Global.downloadTTitle')))?></th>
+              <th width="30%"><?=ucfirst(strtolower(lang('Global.downloadTDesc')))?></th>
+              <th width="15%"><?=ucfirst(strtolower(lang('Global.downloadTAuthor')))?></th>
+              <th width="10%"><?=ucfirst(strtolower(lang('Global.downloadTFile')))?></th>
             </tr>
           </thead>
           <tbody>
@@ -36,7 +36,7 @@
               <td><?php echo $download['nama'] ?></td>
               <td>
                 <?php if($download['gambar']=="") { echo '-'; }else{ ?>
-                  <a href="<?php echo base_url('download/unduh/'.$download['id_download']) ?>" class="btn btn-success btn-sm btn-block"><i class="fa fa-download"></i> Unduh</a>
+                  <a href="<?php echo base_url('download/unduh/'.$download['id_download']) ?>" class="btn btn-success btn-sm btn-block"><i class="fa fa-download"></i> <?=ucfirst(strtolower(lang('Global.downloadTDownload')))?></a>
                 <?php } ?>
               </td>
             </tr>

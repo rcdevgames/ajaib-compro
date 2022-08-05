@@ -31,7 +31,7 @@ $sidebar  = $m_berita->sidebar();
           <div class="col-md-4">
             <div class="card">
               <div class="card-header">
-                <h3>Berita Lainnya</h3>
+                <h3><?=ucfirst(strtolower(lang('Global.newsMore')))?></h3>
               </div>
               <div class="card-body">
                 <?php foreach($sidebar as $sidebar) { ?>
