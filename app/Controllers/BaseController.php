@@ -22,9 +22,10 @@ class BaseController extends Controller
 {
 	public function __construct()
 	{
+		// echo "<pre>";
+		// print_r(get_defined_constants(true));die;
 		$this->language = \Config\Services::language();
 		$this->language->setLocale(WEB_LANG);
-		// print_r(WEB_LANG);die;
 	}
 	/**
 	 * An array of helpers to be loaded automatically upon
