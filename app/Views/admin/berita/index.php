@@ -25,7 +25,7 @@
 				<?php } ?>
 			</td>
 			<td><a href="<?php echo base_url('admin/berita/edit/'.$berita['id_berita']) ?>">
-					<?php echo $berita['judul_berita'] ?>
+					<?php echo $berita['judul_berita_id'] ?>
 				</a>
 				<small>
 					<br><i class="fa fa-eye"></i> Hits: <?php echo $berita['hits'] ?>
@@ -36,7 +36,7 @@
 			</td>
 			<td><small>
 				<i class="fa fa-tags"></i> <a href="<?php echo base_url('admin/berita/kategori/'.$berita['id_kategori']) ?>">
-					<?php echo $berita['nama_kategori'] ?>
+					<?php echo $berita['nama_kategori_id'] ?>
 				</a>
 				<br><i class="fa fa-home"></i> <a href="<?php echo base_url('admin/berita/jenis_berita/'.$berita['jenis_berita']) ?>">
 					<?php echo $berita['jenis_berita'] ?>

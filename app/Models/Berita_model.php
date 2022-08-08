@@ -14,7 +14,7 @@ class Berita_model extends Model
     public function listing()
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->orderBy('berita.id_berita','DESC');
@@ -26,7 +26,7 @@ class Berita_model extends Model
     public function beranda()
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'status_berita' => 'Publish',
@@ -41,7 +41,7 @@ class Berita_model extends Model
     public function sidebar()
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'status_berita' => 'Publish',
@@ -57,7 +57,7 @@ class Berita_model extends Model
     public function home()
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'status_berita' => 'Publish',
@@ -71,7 +71,7 @@ class Berita_model extends Model
     public function kategori($id_kategori)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'status_berita'         => 'Publish',
@@ -86,7 +86,7 @@ class Berita_model extends Model
     public function kategori_all($id_kategori)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'berita.id_kategori'    => $id_kategori]);
@@ -107,7 +107,7 @@ class Berita_model extends Model
     public function author_all($id_user)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'berita.id_user'    => $id_user]);
@@ -128,7 +128,7 @@ class Berita_model extends Model
     public function jenis_berita_all($jenis_berita)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'berita.jenis_berita'    => $jenis_berita]);
@@ -149,7 +149,7 @@ class Berita_model extends Model
     public function status_berita_all($status_berita)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where( [  'berita.status_berita'    => $status_berita]);
@@ -178,7 +178,7 @@ class Berita_model extends Model
     public function detail($id_berita)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where('berita.id_berita',$id_berita);
@@ -191,7 +191,7 @@ class Berita_model extends Model
     public function read($slug_berita)
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.*, kategori.nama_kategori, kategori.slug_kategori, users.nama');
+        $builder->select('berita.*, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori, users.nama');
         $builder->join('kategori','kategori.id_kategori = berita.id_kategori','LEFT');
         $builder->join('users','users.id_user = berita.id_user','LEFT');
         $builder->where('berita.slug_berita',$slug_berita);

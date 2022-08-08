@@ -77,18 +77,3 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
-
-/* ------------------------------------------------------------------------------------------------------- */
-session_start();
-
-$supportLang = ['id', 'en'];
-if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-    $acceptLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-    $language = in_array($acceptLang, $supportLang) ? $acceptLang : 'id';
-} else {
-    $language = 'id';
-}
-
-// define('ADM_LANG', isset($_SESSION['adm_lang']) ? $_SESSION['adm_lang'] : $language);
-define('WEB_LANG', isset($_SESSION['web_lang']) ? $_SESSION['web_lang'] : $language);
-/* ------------------------------------------------------------------------------------------------------- */

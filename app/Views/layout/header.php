@@ -42,7 +42,13 @@ $menu_layanan  = $menu->layanan();
           <li class="dropdown"><a href="#"><span><?=lang('Global.menuProfile')?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <?php foreach($menu_profil as $menu_profil) { ?>
-              <li><a href="<?php echo base_url('berita/profil/'.$menu_profil['slug_berita']) ?>"><?php echo $menu_profil['judul_berita'] ?></a></li>
+              <li><a href="<?php echo base_url('berita/profil/'.$menu_profil['slug_berita']) ?>">
+                <?php if (getLang() == "id"): ?>
+                  <?php echo $menu_profil['judul_berita_id'] ?>
+                <?php else: ?>
+                  <?php echo $menu_profil['judul_berita'] ?>
+                <?php endif ?>
+              </a></li>
               <?php } ?>
               <li><a href="<?php echo base_url('staff') ?>"><?=ucwords(strtolower(lang('Global.menuTeam')))?></a></li>
             </ul>
@@ -58,7 +64,7 @@ $menu_layanan  = $menu->layanan();
           <li class="dropdown"><a href="#"><span><?=lang('Global.menuProject')?></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <?php foreach($menu_layanan as $menu_layanan) { ?>
-              <li><a href="<?php echo base_url('berita/layanan/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>
+              <li><a href="<?php echo base_url('berita/proyek/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>
               <?php } ?>
             </ul>
           </li>

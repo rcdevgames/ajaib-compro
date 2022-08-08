@@ -3,7 +3,7 @@
 	<thead>
 		<tr>
 			<th width="5%">No</th>
-			<th width="5%">Logo</th>
+			<th width="5%">Foto</th>
 			<th width="20%">Nama</th>
 			<th width="20%">Jabatan</th>
 			<th width="30%">Kontak</th>

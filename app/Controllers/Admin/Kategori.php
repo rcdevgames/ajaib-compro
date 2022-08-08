@@ -18,11 +18,13 @@ class Kategori extends BaseController
 		// Start validasi
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
+            'nama_kategori_id' 	=> 'required|min_length[3]|is_unique[kategori.nama_kategori_id]',
             'nama_kategori' 	=> 'required|min_length[3]|is_unique[kategori.nama_kategori]',
         	])) {
 			// masuk database
 			$slug = url_title($this->request->getPost('nama_kategori'), '-', TRUE); 
 			$data = [	'id_user'		=> $this->session->get('id_user'),
+						'nama_kategori_id'	=> $this->request->getPost('nama_kategori_id'),
 						'nama_kategori'	=> $this->request->getPost('nama_kategori'),
 						'slug_kategori'	=> $slug,
 						'urutan'		=> $this->request->getPost('urutan')
@@ -51,11 +53,13 @@ class Kategori extends BaseController
 		// Start validasi
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
+            'nama_kategori_id' 	=> 'required|min_length[3]',
             'nama_kategori' 	=> 'required|min_length[3]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_id'), '-', TRUE); 
 			$data = [	'id_user'		=> $this->session->get('id_user'),
+						'nama_kategori_id'	=> $this->request->getPost('nama_kategori_id'),
 						'nama_kategori'	=> $this->request->getPost('nama_kategori'),
 						'slug_kategori'	=> $slug,
 						'urutan'		=> $this->request->getPost('urutan')
@@ -65,7 +69,7 @@ class Kategori extends BaseController
 			$this->session->setFlashdata('sukses','Data telah diedit');
 			return redirect()->to(base_url('admin/kategori'));
 	    }else{
-			$data = [	'title'			=> 'Edit kategori berita: '.$kategori['nama_kategori'],
+			$data = [	'title'			=> 'Edit kategori berita: '.$kategori['nama_kategori_id'],
 						'kategori'		=> $kategori,
 						'content'		=> 'admin/kategori/edit'
 					];

@@ -48,7 +48,7 @@ $menu_layanan  = $menu->layanan();
             <h4><?=lang('Global.menuProject')?></h4>
             <ul>
               <?php foreach($menu_layanan as $menu_layanan) { ?>
-              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo base_url('berita/layanan/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo base_url('berita/proyek/'.$menu_layanan['slug_berita']) ?>"><?php echo $menu_layanan['judul_berita'] ?></a></li>
               <?php } ?>
             </ul>
           </div>

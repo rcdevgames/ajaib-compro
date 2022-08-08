@@ -43,7 +43,7 @@ $site         = $konfigurasi->listing();
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
-              <p>Berita, Profil &amp; Layanan
+              <p>Berita, Profil &amp; Proyek
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -150,12 +150,12 @@ $site         = $konfigurasi->listing();
             </ul>
           </li> -->
           <!-- pengguna -->
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="<?php echo base_url('admin/client') ?>" class="nav-link">
               <i class="nav-icon fas fa-tasks"></i>
-              <p>Clients &amp; Portfolio</p>
+              <p>Client Testimonial</p>
             </a>
-          </li> -->
+          </li>
           <!-- Staff -->
           <li class="nav-item">
             <a href="#" class="nav-link">

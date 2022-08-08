@@ -10,7 +10,7 @@ class Kategori_model extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_kategori','id_user','nama_kategori','slug_kategori','urutan','hits'];
+    protected $allowedFields = ['id_kategori','id_user','nama_kategori_id','nama_kategori','slug_kategori','urutan','hits'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

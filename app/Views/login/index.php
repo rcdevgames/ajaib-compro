@@ -30,7 +30,7 @@ $site         = $konfigurasi->listing();
 <!-- SWEETALERT -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body class="hold-transition login-page" style="background-color: #2596be;">
+<body class="hold-transition login-page" style="background-color: #0e6838;">
 <div class="login-box" style="min-width: 35% !important; ">
   
   <!-- /.login-logo -->

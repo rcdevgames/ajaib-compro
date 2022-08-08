@@ -20,7 +20,14 @@ echo csrf_field();
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Tagline Website</label>
+	<label class="col-3">Tagline Website (ID)</label>
+	<div class="col-9">
+		<input type="text" name="tagline_id" class="form-control" value="<?php echo $konfigurasi['tagline_id'] ?>">
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-3">Tagline Website (EN)</label>
 	<div class="col-9">
 		<input type="text" name="tagline" class="form-control" value="<?php echo $konfigurasi['tagline'] ?>">
 	</div>
@@ -36,14 +43,26 @@ echo csrf_field();
 <h4>Informasi Profil Website/Aplikasi</h4>
 <hr>
 <div class="form-group row">
-	<label class="col-3">Tentang Website</label>
+	<label class="col-3">Tentang Website (ID)</label>
+	<div class="col-9">
+		<textarea name="tentang_id" class="form-control konten" rows="5"><?php echo $konfigurasi['tentang_id'] ?></textarea>
+	</div>
+</div>
+<div class="form-group row">
+	<label class="col-3">About Website (EN)</label>
 	<div class="col-9">
 		<textarea name="tentang" class="form-control konten" rows="5"><?php echo $konfigurasi['tentang'] ?></textarea>
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Deskripsi Ringkas</label>
+	<label class="col-3">Deskripsi Ringkas (ID)</label>
+	<div class="col-9">
+		<textarea name="deskripsi_id" class="form-control"><?php echo $konfigurasi['deskripsi_id'] ?></textarea>
+	</div>
+</div>
+<div class="form-group row">
+	<label class="col-3">Short Description (EN)</label>
 	<div class="col-9">
 		<textarea name="deskripsi" class="form-control"><?php echo $konfigurasi['deskripsi'] ?></textarea>
 	</div>

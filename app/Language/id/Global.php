@@ -30,6 +30,7 @@ return [
    'newsBtnRead' => 'Baca Selengkapnya',
    'newsMore' => 'Berita Lainnya',
    'newsRead' => 'Lihat',
+   'newsLatest' => 'Berita Terbaru',
    // Galery
    'galeryTitle' => 'Galeri Gambar',
    // Download
@@ -39,4 +40,6 @@ return [
    'downloadTAuthor' => 'Pembuat',
    'downloadTDownload' => 'Unduh',
    'downloadTFile' => 'Dokumen',
+   // Client
+   'clientTestimonials' => 'Testimonial',
 ];

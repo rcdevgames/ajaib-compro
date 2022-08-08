@@ -4,7 +4,13 @@ echo csrf_field();
 ?>
 
 <div class="form-group row">
-	<label class="col-md-2">Judul Berita</label>
+	<label class="col-md-2">Judul Berita (ID)</label>
+	<div class="col-md-10">
+		<input type="text" name="judul_berita_id" class="form-control" value="<?php echo $berita['judul_berita_id'] ?>" required>
+	</div>
+</div>
+<div class="form-group row">
+	<label class="col-md-2">News Title (EN)</label>
 	<div class="col-md-10">
 		<input type="text" name="judul_berita" class="form-control" value="<?php echo $berita['judul_berita'] ?>" required>
 	</div>
@@ -32,7 +38,7 @@ echo csrf_field();
 	<div class="col-md-2">
 		<select name="jenis_berita" class="form-control">
 			<option value="Berita">Berita</option>
-			<option value="Layanan" <?php if($berita['jenis_berita']=="Layanan") { echo 'selected'; } ?>>Layanan</option>
+			<option value="Layanan" <?php if($berita['jenis_berita']=="Layanan") { echo 'selected'; } ?>>Proyek</option>
 			<option value="Profil" <?php if($berita['jenis_berita']=="Profil") { echo 'selected'; } ?>>Profil</option>
 		</select>
 		<small class="text-secondary">Jenis konten</small>
@@ -63,14 +69,27 @@ echo csrf_field();
 </div>
 
 <div class="form-group row">
-	<label class="col-md-2">Ringkasan</label>
+	<label class="col-md-2">Ringkasan (ID)</label>
+	<div class="col-md-10">
+		<textarea name="ringkasan_id" class="form-control"><?php echo $berita['ringkasan_id'] ?></textarea>
+	</div>
+</div>
+<div class="form-group row">
+	<label class="col-md-2">Short Description (EN)</label>
 	<div class="col-md-10">
 		<textarea name="ringkasan" class="form-control"><?php echo $berita['ringkasan'] ?></textarea>
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-md-2">Isi Berita</label>
+	<label class="col-md-2">Isi Berita (ID)</label>
+	<div class="col-md-10">
+		<textarea name="isi_id" class="form-control konten"><?php echo $berita['isi_id'] ?></textarea>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">News Content (EN)</label>
 	<div class="col-md-10">
 		<textarea name="isi" class="form-control konten"><?php echo $berita['isi'] ?></textarea>
 	</div>

@@ -449,3 +449,10 @@ function checklogin()
 		$hasil = number_format($angka,'0',',','.');
 		return $hasil;
 	}
+
+	// Get Current Lang
+	function getLang()
+	{
+		$session = \Config\Services::session();
+        return $session->get("web_lang");
+	}

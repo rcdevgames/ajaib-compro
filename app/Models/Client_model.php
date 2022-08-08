@@ -10,7 +10,7 @@ class Client_model extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = [''];
+    // protected $allowedFields = [''];
 
     protected $useTimestamps = false;
     protected $createdField  = 'tanggal_post';

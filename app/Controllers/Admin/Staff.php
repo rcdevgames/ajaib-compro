@@ -117,20 +117,15 @@ class Staff extends BaseController
 	        	// masuk database
 	        	// masuk database
 				$data = [	'id_staff'		=> $id_staff,
-							'id_user'		=> $this->session->get('id_user'),
 							'id_kategori_staff'	=> $this->request->getPost('id_kategori_staff'),
-							'urutan'	=> $this->request->getPost('urutan'),
 							'nama'			=> $this->request->getPost('nama'),
 							'jabatan'		=> $this->request->getPost('jabatan'),
-							'alamat'		=> $this->request->getPost('alamat'),
 							'telepon'		=> $this->request->getPost('telepon'),
 							'website'		=> $this->request->getPost('website'),
 							'email'			=> $this->request->getPost('email'),
 							'keahlian'		=> $this->request->getPost('keahlian'),
 							'gambar'		=> $namabaru,
 							'status_staff'	=> $this->request->getPost('status_staff'),
-							'tempat_lahir'	=> $this->request->getPost('tempat_lahir'),
-							'tanggal_lahir'	=> date('Y-m-d',strtotime($this->request->getPost('tanggal_lahir'))),
 						];
 				$m_staff->edit($data);
 				// masuk database
@@ -139,20 +134,14 @@ class Staff extends BaseController
 			}else{
 				// masuk database
 				$data = [	'id_staff'		=> $id_staff,
-							'id_user'		=> $this->session->get('id_user'),
 							'id_kategori_staff'	=> $this->request->getPost('id_kategori_staff'),
-							'urutan'	=> $this->request->getPost('urutan'),
 							'nama'			=> $this->request->getPost('nama'),
 							'jabatan'		=> $this->request->getPost('jabatan'),
-							'alamat'		=> $this->request->getPost('alamat'),
 							'telepon'		=> $this->request->getPost('telepon'),
 							'website'		=> $this->request->getPost('website'),
 							'email'			=> $this->request->getPost('email'),
 							'keahlian'		=> $this->request->getPost('keahlian'),
-							// 'gambar'		=> $namabaru,
 							'status_staff'	=> $this->request->getPost('status_staff'),
-							'tempat_lahir'	=> $this->request->getPost('tempat_lahir'),
-							'tanggal_lahir'	=> date('Y-m-d',strtotime($this->request->getPost('tanggal_lahir'))),
 						];
 				$m_staff->edit($data);
 				// masuk database

@@ -41,9 +41,9 @@ class Berita extends BaseController
 		$m_berita->edit($data);
 		// Update hits
 		
-		$data = [	'title'			=> $berita['judul_berita'],
-					'description'	=> $berita['judul_berita'],
-					'keywords'		=> $berita['judul_berita'],
+		$data = [	'title'			=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
+					'description'	=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
+					'keywords'		=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
 					'berita'		=> $berita,
 					'content'		=> 'berita/read'
 				];
@@ -64,9 +64,9 @@ class Berita extends BaseController
 		$m_berita->edit($data);
 		// Update hits
 		
-		$data = [	'title'			=> $berita['judul_berita'],
-					'description'	=> $berita['judul_berita'],
-					'keywords'		=> $berita['judul_berita'],
+		$data = [	'title'			=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
+					'description'	=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
+					'keywords'		=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
 					'berita'		=> $berita,
 					'content'		=> 'berita/profil'
 				];
@@ -74,7 +74,7 @@ class Berita extends BaseController
 	}
 
 	// layanan
-	public function layanan($slug_berita)
+	public function proyek($slug_berita)
 	{
 		$m_konfigurasi 	= new Konfigurasi_model();
 		$m_berita		= new Berita_model();
@@ -88,9 +88,9 @@ class Berita extends BaseController
 		$m_berita->edit($data);
 		// Update hits
 		
-		$data = [	'title'			=> $berita['judul_berita'],
-					'description'	=> $berita['judul_berita'],
-					'keywords'		=> $berita['judul_berita'],
+		$data = [	'title'			=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
+					'description'	=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
+					'keywords'		=> getLang() == "id" ? $berita['judul_berita_id'] : $berita['judul_berita'],
 					'berita'		=> $berita,
 					'content'		=> 'berita/layanan'
 				];

@@ -13,8 +13,13 @@ class Konfigurasi_model extends Model
     // Listing
     public function listing()
     {
-        $query = $this->asArray()
-                ->first();
+        $lang = getLang();
+        $query = $this->asArray()->first();
+        if ($lang == 'id') {
+            $query['tagline'] = $query['tagline_id'];
+            $query['tentang'] = $query['tentang_id'];
+            $query['deskripsi'] = $query['deskripsi_id'];
+        }
         return $query;
     }
 

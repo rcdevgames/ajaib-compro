@@ -49,7 +49,7 @@ $layanan      = $menu->layanan();
             </div>
           </div>
           <?php $pr++; } ?>
-</div>
+        </div>
       </div>
     </section><!-- End Featured Services Section -->
 
@@ -93,15 +93,14 @@ $layanan      = $menu->layanan();
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Layanan Kami</h2>
-          <p>Yuk gunakan layanan yang ada di <?php echo namaweb() ?>. <?php echo tagline() ?></p>
+          <h2>Proyek Kami</h2>
         </div>
 
         <div class="row">
           <?php $ml = 1; foreach($layanan as $layanan) { ?>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="<?php echo $ml; ?>00">
             <div class="icon"><i class="<?php echo $layanan['icon'] ?>"></i></div>
-            <h4 class="title"><a href="<?php echo base_url('berita/layanan/'.$layanan['slug_berita']) ?>"><?php echo $layanan['judul_berita'] ?></a></h4>
+            <h4 class="title"><a href="<?php echo base_url('berita/proyek/'.$layanan['slug_berita']) ?>"><?php echo $layanan['judul_berita'] ?></a></h4>
             <p class="description"><?php echo $layanan['ringkasan'] ?></p>
           </div>
           <?php $ml++; } ?>
@@ -110,7 +109,7 @@ $layanan      = $menu->layanan();
       </div>
     </section><!-- End Services Section -->
 
-    <?php include('berita.php') ?>
+    <?php include('client.php') ?>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">

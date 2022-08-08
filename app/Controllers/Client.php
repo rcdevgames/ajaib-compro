@@ -13,7 +13,7 @@ class Client extends BaseController
 		$m_konfigurasi 	= new Konfigurasi_model();
 		$m_client		= new Client_model();
 		$konfigurasi 	= $m_konfigurasi->listing();
-		$client 		= $m_client->home();
+		$client 		= $m_client->listing();
 
 		$data = [	'title'			=> 'Client Kami',
 					'description'	=> 'Client Kami '.$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],

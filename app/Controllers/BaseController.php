@@ -20,13 +20,11 @@ use Psr\Log\LoggerInterface;
 
 class BaseController extends Controller
 {
-	public function __construct()
-	{
-		// echo "<pre>";
-		// print_r(get_defined_constants(true));die;
-		$this->language = \Config\Services::language();
-		$this->language->setLocale(WEB_LANG);
-	}
+	// public function __construct()
+	// {
+	// 	echo "<pre>";
+	// 	print_r(get_defined_constants(true));die;
+	// }
 	/**
 	 * An array of helpers to be loaded automatically upon
 	 * class instantiation. These helpers will be available
@@ -52,7 +50,31 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.: $this->session = \Config\Services::session();
-		$this->session = \Config\Services::session();
-		$this->db      = \Config\Database::connect();
+		$this->session 	= \Config\Services::session();
+		$this->db      	= \Config\Database::connect();
+		$this->language = \Config\Services::language();
+		$this->lang 	= $this->session->get('web_lang');
+
+
+		$this->changeLanguage();
+	}
+
+	public function changeLanguage()
+	{
+		/* ------------------------------------------------------------------------------------------------------- */
+		$supportLang = ['id', 'en'];
+		if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+		    $acceptLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		    $language = in_array($acceptLang, $supportLang) ? $acceptLang : 'id';
+		} else {
+		    $language = 'id';
+		}
+
+		if ($this->session->get('web_lang') !== null) {
+			$language = $this->session->get('web_lang');
+		}
+		$this->language->setLocale($language);
+		define('WEB_LANG', $language);
+		/* ------------------------------------------------------------------------------------------------------- */
 	}
 }

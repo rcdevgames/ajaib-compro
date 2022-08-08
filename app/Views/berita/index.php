@@ -21,9 +21,17 @@
            <div class="card" style="margin-bottom: 20px;">
             <img src="<?php echo base_url('assets/upload/image/'.$berita['gambar']) ?>">
             <div class="card-body">
-              <h3><?php echo $berita['judul_berita'] ?></h3>
+              <?php if (getLang() == "id"): ?>
+                <h3><?php echo $berita['judul_berita_id'] ?></h3>
+              <?php else: ?>
+                <h3><?php echo $berita['judul_berita'] ?></h3>
+              <?php endif ?>
               <p class="card-text">
+                <?php if (getLang() == "id"): ?>
+                <?php echo $berita['ringkasan_id'] ?>
+                <?php else: ?>
                 <?php echo $berita['ringkasan'] ?>
+                <?php endif ?>
               </p>
               <p>
                 <a href="<?php echo base_url('berita/read/'.$berita['slug_berita']) ?>" class="btn btn-sm btn-success">

@@ -90,7 +90,13 @@ echo csrf_field();
 				</div>
 
 				<div class="form-group row">
-					<label class="col-3">Testimoni</label>
+					<label class="col-3">Testimoni (ID)</label>
+					<div class="col-9">
+						<textarea name="isi_testimoni_id" placeholder="Testimoni" class="form-control"><?php echo set_value('isi_testimoni_id') ?></textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-3">Testimoni (EN)</label>
 					<div class="col-9">
 						<textarea name="isi_testimoni" placeholder="Testimoni" class="form-control"><?php echo set_value('isi_testimoni') ?></textarea>
 					</div>
