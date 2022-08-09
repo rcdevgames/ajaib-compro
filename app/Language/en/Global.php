@@ -42,4 +42,5 @@ return [
    'downloadTFile' => 'File',
    // Client
    'clientTestimonials' => 'Testimonials',
+   'clientTitle' => 'Our Clients',
 ];

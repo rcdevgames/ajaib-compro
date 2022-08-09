@@ -16,9 +16,9 @@ class Galeri extends BaseController
 		$konfigurasi 	= $m_konfigurasi->listing();
 		$galeri 		= $m_galeri->galeri();
 
-		$data = [	'title'			=> 'Galeri Gambar',
-					'description'	=> 'Galeri Gambar '.$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
-					'keywords'		=> 'Galeri Gambar '.$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
+		$data = [	'title'			=> lang('Global.galeryTitle'),
+					'description'	=> lang('Global.galeryTitle').$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
+					'keywords'		=> lang('Global.galeryTitle').$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
 					'galeri'		=> $galeri,
 					'konfigurasi'	=> $konfigurasi,
 					'content'		=> 'galeri/index'

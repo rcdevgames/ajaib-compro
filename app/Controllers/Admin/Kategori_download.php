@@ -19,10 +19,12 @@ class Kategori_download extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
             'nama_kategori_download' 	=> 'required|min_length[3]|is_unique[kategori_download.nama_kategori_download]',
+            'nama_kategori_download_id' 	=> 'required|min_length[3]|is_unique[kategori_download.nama_kategori_download_id]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori_download'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_download_id'), '-', TRUE); 
 			$data = [	'id_user'					=> $this->session->get('id_user'),
+						'nama_kategori_download_id'	=> $this->request->getPost('nama_kategori_download_id'),
 						'nama_kategori_download'	=> $this->request->getPost('nama_kategori_download'),
 						'slug_kategori_download'	=> $slug,
 						'urutan'					=> $this->request->getPost('urutan')
@@ -52,10 +54,12 @@ class Kategori_download extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
             'nama_kategori_download' 	=> 'required|min_length[3]',
+            'nama_kategori_download_id' 	=> 'required|min_length[3]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori_download'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_download_id'), '-', TRUE); 
 			$data = [	'id_user'		=> $this->session->get('id_user'),
+						'nama_kategori_download_id'	=> $this->request->getPost('nama_kategori_download_id'),
 						'nama_kategori_download'	=> $this->request->getPost('nama_kategori_download'),
 						'slug_kategori_download'	=> $slug,
 						'urutan'		=> $this->request->getPost('urutan')
@@ -65,7 +69,7 @@ class Kategori_download extends BaseController
 			$this->session->setFlashdata('sukses','Data telah diedit');
 			return redirect()->to(base_url('admin/kategori_download'));
 	    }else{
-			$data = [	'title'					=> 'Edit Kategori Download: '.$kategori_download['nama_kategori_download'],
+			$data = [	'title'					=> 'Edit Kategori Download: '.$kategori_download['nama_kategori_download_id'],
 						'kategori_download'		=> $kategori_download,
 						'content'				=> 'admin/kategori_download/edit'
 					];

@@ -15,9 +15,9 @@ class Client extends BaseController
 		$konfigurasi 	= $m_konfigurasi->listing();
 		$client 		= $m_client->listing();
 
-		$data = [	'title'			=> 'Client Kami',
-					'description'	=> 'Client Kami '.$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
-					'keywords'		=> 'Client Kami '.$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
+		$data = [	'title'			=> lang('Global.clientTitle'),
+					'description'	=> lang('Global.clientTitle').$konfigurasi['namaweb'].', '.$konfigurasi['tentang'],
+					'keywords'		=> lang('Global.clientTitle').$konfigurasi['namaweb'].', '.$konfigurasi['keywords'],
 					'client'		=> $client,
 					'konfigurasi'	=> $konfigurasi,
 					'content'		=> 'client/index'
