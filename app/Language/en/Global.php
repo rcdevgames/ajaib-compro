@@ -12,6 +12,7 @@ return [
    'menuNews' => 'NEWS',
    'menuGalery' => 'GALERY',
    'menuDownload' => 'DOWNLOAD',
+   'menuOrg' => 'ORGANIZATION STRUCTURE',
    // Footer
    'footerPhone' => 'Phone',
    'footerLocation' => 'Find Us on Map',
@@ -43,4 +44,9 @@ return [
    // Client
    'clientTestimonials' => 'Testimonials',
    'clientTitle' => 'Our Clients',
+   // ORG
+   'orgTitle' => 'Organization Structure',
+   // Common
+   'comUpdated' => 'Updated by',
+   'comDate' => 'Date',
 ];

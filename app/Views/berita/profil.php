@@ -29,7 +29,7 @@
                <?php echo $berita['isi'] ?>
             </div>
             <div class="card-footer">
-              Updated by: <?php echo $berita['nama'] ?> | Tanggal: <?php echo tanggal_bulan_menit($berita['tanggal']) ?>
+              <?=lang('Global.comUpdated')?>: <?php echo $berita['nama'] ?> | <?=lang('Global.comDate')?>: <?php echo getLang() == "id" ? tanggal_bulan_menit($berita['tanggal']) : tanggal_bulan_menit_en($berita['tanggal']) ?>
             </div>
           </div>
           

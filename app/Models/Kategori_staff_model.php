@@ -10,7 +10,7 @@ class Kategori_staff_model extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_kategori_staff','id_user','nama_kategori_staff','slug_kategori_staff','urutan','hits'];
+    protected $allowedFields = ['id_kategori_staff','id_user','nama_kategori_staff','nama_kategori_staff_id','slug_kategori_staff','urutan','hits'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

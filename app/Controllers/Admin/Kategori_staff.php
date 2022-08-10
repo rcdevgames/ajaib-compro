@@ -19,11 +19,13 @@ class Kategori_staff extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
             'nama_kategori_staff' 	=> 'required|min_length[3]|is_unique[kategori_staff.nama_kategori_staff]',
+            'nama_kategori_staff_id' 	=> 'required|min_length[3]|is_unique[kategori_staff.nama_kategori_staff_id]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori_staff'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_staff_id'), '-', TRUE); 
 			$data = [	'id_user'					=> $this->session->get('id_user'),
 						'nama_kategori_staff'	=> $this->request->getPost('nama_kategori_staff'),
+						'nama_kategori_staff_id'	=> $this->request->getPost('nama_kategori_staff_id'),
 						'slug_kategori_staff'	=> $slug,
 						'urutan'					=> $this->request->getPost('urutan')
 					];
@@ -52,11 +54,13 @@ class Kategori_staff extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
             'nama_kategori_staff' 	=> 'required|min_length[3]',
+            'nama_kategori_staff_id' 	=> 'required|min_length[3]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori_staff'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_staff_id'), '-', TRUE); 
 			$data = [	'id_user'		=> $this->session->get('id_user'),
 						'nama_kategori_staff'	=> $this->request->getPost('nama_kategori_staff'),
+						'nama_kategori_staff_id'	=> $this->request->getPost('nama_kategori_staff_id'),
 						'slug_kategori_staff'	=> $slug,
 						'urutan'		=> $this->request->getPost('urutan')
 					];
@@ -65,7 +69,7 @@ class Kategori_staff extends BaseController
 			$this->session->setFlashdata('sukses','Data telah diedit');
 			return redirect()->to(base_url('admin/kategori_staff'));
 	    }else{
-			$data = [	'title'					=> 'Edit Kategori Staff: '.$kategori_staff['nama_kategori_staff'],
+			$data = [	'title'					=> 'Edit Kategori Staff: '.$kategori_staff['nama_kategori_staff_id'],
 						'kategori_staff'		=> $kategori_staff,
 						'content'				=> 'admin/kategori_staff/edit'
 					];

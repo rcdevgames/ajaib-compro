@@ -59,6 +59,7 @@ $menu_layanan  = $menu->layanan();
               <li><a href="<?php echo base_url('berita') ?>"><?=ucfirst(strtolower(lang('Global.menuNews')))?></a></li>
               <li><a href="<?php echo base_url('galeri') ?>"><?=ucfirst(strtolower(lang('Global.menuGalery')))?></a></li>
               <li><a href="<?php echo base_url('download') ?>"><?=ucwords(strtolower(lang('Global.menuDownload')))?></a></li>
+              <li><a href="<?php echo base_url('organisasi') ?>"><?=ucwords(strtolower(lang('Global.menuOrg')))?></a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span><?=lang('Global.menuProject')?></span> <i class="bi bi-chevron-down"></i></a>

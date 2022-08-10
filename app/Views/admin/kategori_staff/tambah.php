@@ -19,12 +19,18 @@ echo csrf_field();
 			<div class="modal-body">
 
 				<div class="form-group row">
-					<label class="col-3">Nama Kategori Staff</label>
+					<label class="col-3">Nama Kategori Staff (ID)</label>
+					<div class="col-9">
+						<input type="text" name="nama_kategori_staff_id" class="form-control" placeholder="Nama kategori_staff" value="<?php echo set_value('nama_kategori_staff_id') ?>" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-3">Nama Kategori Staff (EN)</label>
 					<div class="col-9">
 						<input type="text" name="nama_kategori_staff" class="form-control" placeholder="Nama kategori_staff" value="<?php echo set_value('nama_kategori_staff') ?>" required>
 					</div>
 				</div>
-
+				
 				<div class="form-group row">
 					<label class="col-3">Nomor urut Kategori Staff</label>
 					<div class="col-9">

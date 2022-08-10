@@ -19,11 +19,13 @@ class Kategori_galeri extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
             'nama_kategori_galeri' 	=> 'required|min_length[3]|is_unique[kategori_galeri.nama_kategori_galeri]',
+            'nama_kategori_galeri_id' 	=> 'required|min_length[3]|is_unique[kategori_galeri.nama_kategori_galeri_id]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori_galeri'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_galeri_id'), '-', TRUE); 
 			$data = [	'id_user'					=> $this->session->get('id_user'),
 						'nama_kategori_galeri'	=> $this->request->getPost('nama_kategori_galeri'),
+						'nama_kategori_galeri_id'	=> $this->request->getPost('nama_kategori_galeri_id'),
 						'slug_kategori_galeri'	=> $slug,
 						'urutan'					=> $this->request->getPost('urutan')
 					];
@@ -52,11 +54,13 @@ class Kategori_galeri extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
             'nama_kategori_galeri' 	=> 'required|min_length[3]',
+            'nama_kategori_galeri_id' 	=> 'required|min_length[3]',
         	])) {
 			// masuk database
-			$slug = url_title($this->request->getPost('nama_kategori_galeri'), '-', TRUE); 
+			$slug = url_title($this->request->getPost('nama_kategori_galeri_id'), '-', TRUE); 
 			$data = [	'id_user'		=> $this->session->get('id_user'),
 						'nama_kategori_galeri'	=> $this->request->getPost('nama_kategori_galeri'),
+						'nama_kategori_galeri_id'	=> $this->request->getPost('nama_kategori_galeri_id'),
 						'slug_kategori_galeri'	=> $slug,
 						'urutan'		=> $this->request->getPost('urutan')
 					];
@@ -65,7 +69,7 @@ class Kategori_galeri extends BaseController
 			$this->session->setFlashdata('sukses','Data telah diedit');
 			return redirect()->to(base_url('admin/kategori_galeri'));
 	    }else{
-			$data = [	'title'					=> 'Edit Kategori Galeri: '.$kategori_galeri['nama_kategori_galeri'],
+			$data = [	'title'					=> 'Edit Kategori Galeri: '.$kategori_galeri['nama_kategori_galeri_id'],
 						'kategori_galeri'		=> $kategori_galeri,
 						'content'				=> 'admin/kategori_galeri/edit'
 					];

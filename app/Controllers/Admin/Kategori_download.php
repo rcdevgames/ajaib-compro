@@ -14,6 +14,7 @@ class Kategori_download extends BaseController
 		$m_kategori_download = new Kategori_download_model();
 		$kategori_download 	= $m_kategori_download->listing();
 		$total 		= $m_kategori_download->total();
+		// print_r($kategori_download);die;
 
 		// Start validasi
 		if($this->request->getMethod() === 'post' && $this->validate(

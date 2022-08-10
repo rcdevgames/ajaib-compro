@@ -192,6 +192,13 @@ $site         = $konfigurasi->listing();
               <p>Pengguna Website</p>
             </a>
           </li>
+          <!-- pengguna -->
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/organisasi') ?>" class="nav-link">
+              <i class="nav-icon fas fa-sitemap"></i>
+              <p>Struktur Organisasi</p>
+            </a>
+          </li>
           <!-- Konfigurasi -->
           <li class="nav-item">
             <a href="#" class="nav-link">

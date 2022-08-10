@@ -10,7 +10,7 @@ class Kategori_galeri_model extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_kategori_galeri','id_user','nama_kategori_galeri','slug_kategori_galeri','urutan','hits'];
+    protected $allowedFields = ['id_kategori_galeri','id_user','nama_kategori_galeri','nama_kategori_galeri_id','slug_kategori_galeri','urutan','hits'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

@@ -13,7 +13,10 @@
 		<?php $no=1; foreach($kategori_download as $kategori_download) { ?>
 		<tr>
 			<td><?php echo $no ?></td>
-			<td><?php echo $kategori_download['nama_kategori_download'] ?></td>
+			<td>
+				<p><strong>ID</strong> : <?php echo $kategori_download['nama_kategori_download_id'] ?></p>
+				<p><strong>EN</strong> : <?php echo $kategori_download['nama_kategori_download'] ?></p>
+			</td>
 			<td><?php echo $kategori_download['slug_kategori_download'] ?></td>
 			<td><?php echo $kategori_download['urutan'] ?></td>
 			<td>

@@ -36,6 +36,7 @@ class Download extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
 				'judul_download' => 'required',
+				'judul_download_id' => 'required',
 				'gambar'	 	=> [
 									'uploaded[gambar]',
 					                'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png,application/pdf,application/doc,application/msword,application/xls,application/xlsx,application/ppt,application/pptx]',
@@ -52,8 +53,10 @@ class Download extends BaseController
 	        		'id_user'				=> $this->session->get('id_user'),
 					'id_kategori_download'	=> $this->request->getVar('id_kategori_download'),
 					'judul_download'		=> $this->request->getVar('judul_download'),
+					'judul_download_id'		=> $this->request->getVar('judul_download_id'),
 					'jenis_download'		=> $this->request->getVar('jenis_download'),
 					'isi'					=> $this->request->getVar('isi'),
+					'isi_id'					=> $this->request->getVar('isi_id'),
 					'gambar' 				=> $namabaru,
 					'website'				=> $this->request->getVar('website'),
 					'tanggal_post'			=> date('Y-m-d H:i:s')
@@ -65,8 +68,10 @@ class Download extends BaseController
 	        		'id_user'				=> $this->session->get('id_user'),
 					'id_kategori_download'	=> $this->request->getVar('id_kategori_download'),
 					'judul_download'		=> $this->request->getVar('judul_download'),
+					'judul_download_id'		=> $this->request->getVar('judul_download_id'),
 					'jenis_download'		=> $this->request->getVar('jenis_download'),
 					'isi'					=> $this->request->getVar('isi'),
+					'isi_id'					=> $this->request->getVar('isi_id'),
 					'website'				=> $this->request->getVar('website'),
 					'tanggal_post'			=> date('Y-m-d H:i:s')
 	        	);
@@ -94,6 +99,7 @@ class Download extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate(
 			[
 				'judul_download' => 'required',
+				'judul_download_id' => 'required',
 				'gambar'	 	=> [
 									'uploaded[gambar]',
 					                'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png,application/pdf,document/doc,application/msword,application/xls,application/xlsx,application/ppt,application/pptx]',
@@ -111,8 +117,10 @@ class Download extends BaseController
 	        		'id_user'				=> $this->session->get('id_user'),
 					'id_kategori_download'	=> $this->request->getVar('id_kategori_download'),
 					'judul_download'		=> $this->request->getVar('judul_download'),
+					'judul_download_id'		=> $this->request->getVar('judul_download_id'),
 					'jenis_download'		=> $this->request->getVar('jenis_download'),
 					'isi'					=> $this->request->getVar('isi'),
+					'isi_id'					=> $this->request->getVar('isi_id'),
 					'gambar' 				=> $namabaru,
 					'website'				=> $this->request->getVar('website'),
 	        	);
@@ -124,8 +132,10 @@ class Download extends BaseController
 	        		'id_user'				=> $this->session->get('id_user'),
 					'id_kategori_download'	=> $this->request->getVar('id_kategori_download'),
 					'judul_download'		=> $this->request->getVar('judul_download'),
+					'judul_download_id'		=> $this->request->getVar('judul_download_id'),
 					'jenis_download'		=> $this->request->getVar('jenis_download'),
 					'isi'					=> $this->request->getVar('isi'),
+					'isi_id'					=> $this->request->getVar('isi_id'),
 					'website'				=> $this->request->getVar('website'),
 	        	);
 	        	$m_download->edit($data);

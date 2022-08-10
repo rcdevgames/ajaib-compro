@@ -4,7 +4,14 @@ echo csrf_field();
 ?>
 
 <div class="form-group row">
-	<label class="col-md-2">Judul Download</label>
+	<label class="col-md-2">Judul Download (ID)</label>
+	<div class="col-md-10">
+		<input type="text" name="judul_download_id" class="form-control" value="<?php echo set_value('judul_download_id') ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Judul Download (EN)</label>
 	<div class="col-md-10">
 		<input type="text" name="judul_download" class="form-control" value="<?php echo set_value('judul_download') ?>" required>
 	</div>
@@ -39,7 +46,14 @@ echo csrf_field();
 </div>
 
 <div class="form-group row">
-	<label class="col-md-2">Isi Download</label>
+	<label class="col-md-2">Isi Download (ID)</label>
+	<div class="col-md-10">
+		<textarea name="isi_id" class="form-control konten"><?php echo set_value('isi_id') ?></textarea>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-md-2">Isi Download (EN)</label>
 	<div class="col-md-10">
 		<textarea name="isi" class="form-control konten"><?php echo set_value('isi') ?></textarea>
 	</div>

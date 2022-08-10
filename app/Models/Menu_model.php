@@ -10,7 +10,7 @@ class Menu_model extends Model
     public function berita()
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.id_kategori,berita.icon, berita.ringkasan, berita.gambar, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori');
+        $builder->select('berita.id_kategori,berita.icon, berita.ringkasan, berita.ringkasan_id, berita.gambar, kategori.nama_kategori, kategori.nama_kategori_id, kategori.slug_kategori');
         $builder->join('kategori', 'kategori.id_kategori = berita.id_kategori');
         $builder->where(array('status_berita'    => 'Publish','jenis_berita' => 'Berita'));
         $builder->groupBy('berita.id_kategori');

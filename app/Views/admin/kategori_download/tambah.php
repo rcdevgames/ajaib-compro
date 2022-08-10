@@ -19,7 +19,14 @@ echo csrf_field();
 			<div class="modal-body">
 
 				<div class="form-group row">
-					<label class="col-3">Nama Kategori Download</label>
+					<label class="col-3">Nama Kategori Download (ID)</label>
+					<div class="col-9">
+						<input type="text" name="nama_kategori_download_id" class="form-control" placeholder="Nama kategori_download" value="<?php echo set_value('nama_kategori_download_id') ?>" required>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-3">Nama Kategori Download (EN)</label>
 					<div class="col-9">
 						<input type="text" name="nama_kategori_download" class="form-control" placeholder="Nama kategori_download" value="<?php echo set_value('nama_kategori_download') ?>" required>
 					</div>

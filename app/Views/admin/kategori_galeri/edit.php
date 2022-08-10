@@ -4,7 +4,14 @@ echo csrf_field();
 ?>
 
 <div class="form-group row">
-	<label class="col-3">Nama Kategori Galeri</label>
+	<label class="col-3">Nama Kategori Galeri (ID)</label>
+	<div class="col-9">
+		<input type="text" name="nama_kategori_galeri_id" class="form-control" placeholder="Nama kategori_galeri" value="<?php echo $kategori_galeri['nama_kategori_galeri_id'] ?>" required>
+	</div>
+</div>
+
+<div class="form-group row">
+	<label class="col-3">Nama Kategori Galeri (EN)</label>
 	<div class="col-9">
 		<input type="text" name="nama_kategori_galeri" class="form-control" placeholder="Nama kategori_galeri" value="<?php echo $kategori_galeri['nama_kategori_galeri'] ?>" required>
 	</div>

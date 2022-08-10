@@ -12,6 +12,7 @@ return [
    'menuNews' => 'BERITA',
    'menuGalery' => 'GALERI',
    'menuDownload' => 'UNDUH DOKUMEN',
+   'menuOrg' => 'STRUKTUR ORGANISASI',
    // Footer
    'footerPhone' => 'Telepon',
    'footerLocation' => 'Temukan Kami di Peta',
@@ -43,4 +44,9 @@ return [
    // Client
    'clientTestimonials' => 'Testimonial',
    'clientTitle' => 'Klien Kami',
+   // ORG
+   'orgTitle' => 'Struktur Organisasi',
+   // Common
+   'comUpdated' => 'Di Perbaharui oleh',
+   'comDate' => 'Tanggal',
 ];

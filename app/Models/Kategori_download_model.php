@@ -10,7 +10,7 @@ class Kategori_download_model extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_kategori_download','id_user','nama_kategori_download','slug_kategori_download','urutan','hits'];
+    protected $allowedFields = ['id_kategori_download','id_user','nama_kategori_download','nama_kategori_download_id','slug_kategori_download','urutan','hits'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

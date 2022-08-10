@@ -13,7 +13,10 @@
 		<?php $no=1; foreach($kategori_staff as $kategori_staff) { ?>
 		<tr>
 			<td><?php echo $no ?></td>
-			<td><?php echo $kategori_staff['nama_kategori_staff'] ?></td>
+			<td>
+				<p><strong>ID</strong> : <?php echo $kategori_staff['nama_kategori_staff_id'] ?></p>
+				<p><strong>EN</strong> : <?php echo $kategori_staff['nama_kategori_staff'] ?></p>
+			</td>
 			<td><?php echo $kategori_staff['slug_kategori_staff'] ?></td>
 			<td><?php echo $kategori_staff['urutan'] ?></td>
 			<td>

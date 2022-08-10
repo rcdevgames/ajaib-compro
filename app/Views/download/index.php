@@ -31,8 +31,13 @@
             <?php $no=1; foreach($download as $download) { ?>
             <tr>
               <td class="text-center"><?php echo $no ?></td>
+              <?php if (getLang() == "id"): ?>
+              <td><?php echo $download['judul_download_id'] ?></td>
+              <td><?php echo $download['isi_id'] ?></td>
+              <?php else: ?>
               <td><?php echo $download['judul_download'] ?></td>
               <td><?php echo $download['isi'] ?></td>
+              <?php endif ?>
               <td><?php echo $download['nama'] ?></td>
               <td>
                 <?php if($download['gambar']=="") { echo '-'; }else{ ?>

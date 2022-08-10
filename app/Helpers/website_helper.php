@@ -1,5 +1,6 @@
 <?php
 use App\Models\Konfigurasi_model;
+use App\Models\Organisasi_model;
 use App\Models\User_model;
 
 // namaweb
@@ -40,6 +41,14 @@ function icon()
 	$m_konfigurasi = new Konfigurasi_model();
 	$konfigurasi 	= $m_konfigurasi->listing();
 	return base_url('assets/upload/image/'.$konfigurasi['icon']);
+}
+
+// structure
+function organization()
+{
+	$m_organisasi = new Organisasi_model();
+	$organisasi 	= $m_organisasi->listing();
+	return base_url('assets/upload/image/'.$organisasi['gambar']);
 }
 
 // metatext
@@ -388,6 +397,68 @@ function checklogin()
 		}
 
 		$hasil = date('d',strtotime($tanggal)).' '.$nama_bulan.' '.date('Y',strtotime($tanggal)).' jam '.date('H:i:s',strtotime($tanggal));
+		return $hasil;
+	}
+
+	// tanggal_bulan
+	function tanggal_bulan_menit_en($tanggal)
+	{
+		$bulan 	= date('m',strtotime($tanggal));
+		$hari 	= date('l',strtotime($tanggal));
+
+		if($hari=='Sunday') {
+			$nama_hari = 'Minggu';
+		}elseif($hari=='Monday') {
+			$nama_hari = 'Senin';
+		}elseif($hari=='Tuesday') {
+			$nama_hari = 'Selasa';
+		}elseif($hari=='Wednesday') {
+			$nama_hari = 'Rabu';
+		}elseif($hari=='Thursday') {
+			$nama_hari = 'Kamis';
+		}elseif($hari=='Friday') {
+			$nama_hari = 'Jumat';
+		}elseif($hari=='Saturday') {
+			$nama_hari = 'Sabtu';
+		}
+
+		if($bulan=='01') {
+			$nama_bulan = 'January';
+		}elseif($bulan=='02') {
+			$nama_bulan = 'February';
+		}elseif($bulan=='03') {
+			$nama_bulan = 'March';
+		}elseif($bulan=='04') {
+			$nama_bulan = 'April';
+		}elseif($bulan=='05') {
+			$nama_bulan = 'May';
+		}elseif($bulan=='06') {
+			$nama_bulan = 'June';
+		}elseif($bulan=='07') {
+			$nama_bulan = 'July';
+		}elseif($bulan=='08') {
+			$nama_bulan = 'August';
+		}elseif($bulan=='09') {
+			$nama_bulan = 'September';
+		}elseif($bulan=='10') {
+			$nama_bulan = 'Oktober';
+		}elseif($bulan=='11') {
+			$nama_bulan = 'November';
+		}elseif($bulan=='12') {
+			$nama_bulan = 'Desember';
+		}
+
+		$dayDate = date('d',strtotime($tanggal));
+		$sym = 'th';
+		if ($dayDate == 2) {
+			$sym = 'st';
+		}else if ($dayDate == 2) {
+			$sym = 'nd';
+		}else if ($dayDate == 3) {
+			$sym = 'rd';
+		}
+
+		$hasil = $nama_bulan.' '. $dayDate.$sym.' '.date('Y',strtotime($tanggal)).' - '.date('H:i:s',strtotime($tanggal));
 		return $hasil;
 	}
 
