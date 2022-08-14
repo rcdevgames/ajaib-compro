@@ -2,7 +2,7 @@
 use App\Models\Menu_model;
 $menu         = new Menu_model();
 $berita       = $menu->berita();
-$profil       = $menu->profil();
+$link       = $menu->link();
 $layanan      = $menu->layanan();
 ?>
 
@@ -38,14 +38,14 @@ $layanan      = $menu->layanan();
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
-
+        
         <div class="row">
-          <?php $pr = 1; foreach($profil as $profil) { ?>
-          <div class="col-md-6 col-lg-4 text-center d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="<?php echo $pr ?>00">
-              <div class="icon"><i class="<?php echo $profil['icon'] ?>"></i></div>
-              <h4 class="title"><a href="<?php echo base_url('berita/profil/'.$profil['slug_berita']) ?>"><?php echo $profil['judul_berita'] ?></a></h4>
-              <p class="description"><?php echo $profil['ringkasan'] ?></p>
+          <?php $pr = 1; foreach($link as $link) { ?>
+          <div class="col-md-4 col-lg-3 text-center d-flex align-items-stretch mb-5 mb-lg-0" style="padding: calc(var(--bs-gutter-x)/ 2);">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="<?php echo $pr ?>00" style="width: 100%;">
+              <div class="icon"><img src="<?php echo base_url('assets/upload/image/thumbs/'.$link['gambar']) ?>"/></div>
+              <h4 class="title"><?php echo $link['judul_berita'] ?></h4>
+              <p class="description"><?php echo $link['ringkasan'] ?></p>
             </div>
           </div>
           <?php $pr++; } ?>

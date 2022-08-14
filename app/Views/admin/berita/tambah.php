@@ -37,10 +37,11 @@ echo csrf_field();
 		<small class="text-secondary">Kategori</small>
 	</div>
 	<div class="col-md-2">
-		<select name="jenis_berita" class="form-control">
+		<select name="jenis_berita" class="form-control" id="jenis_berita">
 			<option value="Berita">Berita</option>
 			<option value="Layanan">Proyek</option>
 			<option value="Profil">Profil</option>
+			<option value="Link">Link</option>
 		</select>
 		<small class="text-secondary">Jenis konten</small>
 	</div>
@@ -66,6 +67,13 @@ echo csrf_field();
 	<div class="col-md-2">
 		<input type="text" name="jam" class="form-control jam" value="<?php if(isset($_POST['jam'])) { echo set_value('jam'); }else{ echo date('H:i:s'); } ?>">
 		<small class="text-secondary">Format <strong>HH:MM:SS</strong>. Misal: <?php echo date('H:i:s') ?></small>
+	</div>
+</div>
+
+<div class="form-group row" id="link" style="display: none;">
+	<label class="col-md-2">Link Website</label>
+	<div class="col-md-10">
+		<input type="text" name="url" class="form-control" value="<?php echo set_value('url') ?>">
 	</div>
 </div>
 
@@ -112,3 +120,16 @@ echo csrf_field();
 </div>
 
 <?php echo form_close(); ?>
+
+<script>
+	$(document).ready(function () {
+		$('#jenis_berita').change(function (e) { 
+			// e.preventDefault();
+			if ($(this).val() == "Link") {
+				$("#link").show();
+			}else {
+				$("#link").hide();
+			}
+		});
+	});
+</script>

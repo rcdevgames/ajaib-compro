@@ -18,7 +18,7 @@ class Berita extends BaseController
 		$berita 		= $m_berita->listing();
 		$total 			= $m_berita->total();
 
-		$data = [	'title'			=> 'Berita, Profil dan Layanan ('.$total.')',
+		$data = [	'title'			=> 'Berita, Profil, Link dan Layanan ('.$total.')',
 					'berita'		=> $berita,
 					'content'		=> 'admin/berita/index'
 				];
@@ -135,6 +135,7 @@ class Berita extends BaseController
 					'jenis_berita'	=> $this->request->getVar('jenis_berita'),
 					'keywords'		=> $this->request->getVar('keywords'),
 					'icon'			=> $this->request->getVar('icon'),
+					'url'			=> $this->request->getVar('url'),
 					'gambar' 		=> $namabaru,
 					'tanggal_post'	=> date('Y-m-d H:i:s'),
 					'tanggal_publish'	=> date('Y-m-d',strtotime($this->request->getVar('tanggal_publish'))).' '.date('H:i',strtotime($this->request->getVar('jam')))
@@ -156,6 +157,7 @@ class Berita extends BaseController
 					'jenis_berita'	=> $this->request->getVar('jenis_berita'),
 					'keywords'		=> $this->request->getVar('keywords'),
 					'icon'			=> $this->request->getVar('icon'),
+					'url'			=> $this->request->getVar('url'),
 					'tanggal_post'	=> date('Y-m-d H:i:s'),
 					'tanggal_publish'	=> date('Y-m-d',strtotime($this->request->getVar('tanggal_publish'))).' '.date('H:i',strtotime($this->request->getVar('jam')))
 	        	);
@@ -215,6 +217,7 @@ class Berita extends BaseController
 					'jenis_berita'	=> $this->request->getVar('jenis_berita'),
 					'keywords'		=> $this->request->getVar('keywords'),
 					'icon'			=> $this->request->getVar('icon'),
+					'url'			=> $this->request->getVar('url'),
 					'gambar' 		=> $namabaru,
 					'tanggal_publish'	=> date('Y-m-d',strtotime($this->request->getVar('tanggal_publish'))).' '.date('H:i',strtotime($this->request->getVar('jam')))
 	        	);
@@ -236,6 +239,7 @@ class Berita extends BaseController
 					'jenis_berita'	=> $this->request->getVar('jenis_berita'),
 					'keywords'		=> $this->request->getVar('keywords'),
 					'icon'			=> $this->request->getVar('icon'),
+					'url'			=> $this->request->getVar('url'),
 					'tanggal_publish'	=> date('Y-m-d',strtotime($this->request->getVar('tanggal_publish'))).' '.date('H:i',strtotime($this->request->getVar('jam')))
 	        	);
 	        	$m_berita->edit($data);

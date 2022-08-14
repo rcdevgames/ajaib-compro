@@ -43,7 +43,7 @@ return [
    'downloadTFile' => 'Dokumen',
    // Client
    'clientTestimonials' => 'Testimonial',
-   'clientTitle' => 'Klien Kami',
+   'clientTitle' => 'Pelanggan dan Prospek Kita',
    // ORG
    'orgTitle' => 'Struktur Organisasi',
    // Common

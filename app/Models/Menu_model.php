@@ -18,6 +18,16 @@ class Menu_model extends Model
         return $query->getResultArray();
     }
 
+    // Menu link
+    public function link()
+    {
+        $builder = $this->db->table('berita');
+        $builder->select('berita.judul_berita, berita.judul_berita_id, berita.icon, berita.ringkasan, berita.ringkasan_id, berita.gambar, berita.slug_berita, berita.id_berita');
+        $builder->where(array('status_berita'    => 'Publish','jenis_berita' => 'Link'));
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
+
     // Menu profil
     public function profil()
     {

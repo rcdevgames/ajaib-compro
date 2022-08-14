@@ -20,8 +20,6 @@ class Home extends BaseController
 		$slider 		= $m_galeri->slider();
 		$client 		= $m_client->testimoni();
 		$berita2 		= $m_berita->beranda();
-		// echo "<pre>";
-		// print_r($client);die;
 		
 		$data = [	'title'			=> $konfigurasi['namaweb'].' | '.$konfigurasi['tagline'],
 					'description'	=> $konfigurasi['namaweb'].', '.$konfigurasi['tentang'],

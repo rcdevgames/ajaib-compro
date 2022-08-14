@@ -40,6 +40,7 @@ echo csrf_field();
 			<option value="Berita">Berita</option>
 			<option value="Layanan" <?php if($berita['jenis_berita']=="Layanan") { echo 'selected'; } ?>>Proyek</option>
 			<option value="Profil" <?php if($berita['jenis_berita']=="Profil") { echo 'selected'; } ?>>Profil</option>
+			<option value="Link" <?php if($berita['jenis_berita']=="Link") { echo 'selected'; } ?>>Link</option>
 		</select>
 		<small class="text-secondary">Jenis konten</small>
 	</div>
@@ -68,6 +69,12 @@ echo csrf_field();
 	</div>
 </div>
 
+<div class="form-group row">
+	<label class="col-md-2">Link Website</label>
+	<div class="col-md-10">
+	<input type="text" name="url" class="form-control" value="<?php echo $berita['url'] ?>">
+	</div>
+</div>
 <div class="form-group row">
 	<label class="col-md-2">Ringkasan (ID)</label>
 	<div class="col-md-10">
@@ -110,3 +117,15 @@ echo csrf_field();
 </div>
 
 <?php echo form_close(); ?>
+<script>
+	$(document).ready(function () {
+		$('#jenis_berita').change(function (e) { 
+			// e.preventDefault();
+			if ($(this).val() == "Link") {
+				$("#link").show();
+			}else {
+				$("#link").hide();
+			}
+		});
+	});
+</script>

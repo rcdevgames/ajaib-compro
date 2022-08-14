@@ -43,7 +43,7 @@ return [
    'downloadTFile' => 'File',
    // Client
    'clientTestimonials' => 'Testimonials',
-   'clientTitle' => 'Our Clients',
+   'clientTitle' => 'Our Customers and Prospects',
    // ORG
    'orgTitle' => 'Organization Structure',
    // Common

@@ -29,7 +29,11 @@
 				</a>
 				<small>
 					<br><i class="fa fa-eye"></i> Hits: <?php echo $berita['hits'] ?>
-					<br><i class="fa fa-home"></i> Icon: <i class="<?php echo $berita['icon'] ?>"></i> <?php echo $berita['icon'] ?>
+					<?php if($berita['jenis_berita'] == "Link"):?>
+						<br><i class="fa fa-link"></i> <a href="<?php echo $berita['url'] ?>" target="_blank" rel="noopener noreferrer"><?php echo $berita['url'] ?></a>
+					<?php else: ?>
+						<br><i class="fa fa-home"></i> Icon: <i class="<?php echo $berita['icon'] ?>"></i> <?php echo $berita['icon'] ?>
+					<?php endif ?>
 					<br><i class="fa fa-calendar-check"></i> Publish: <?php echo tanggal_bulan_menit($berita['tanggal_publish']) ?>
 					<br><i class="fa fa-calendar"></i> Updated: <?php echo tanggal_bulan_menit($berita['tanggal']) ?>
 				</small>

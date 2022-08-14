@@ -26,7 +26,11 @@
               <h1><?php echo $title ?></h1>
             </div>
             <div class="card-body">
-               <?php echo $berita['isi'] ?>
+              <?php if (getLang() == "id"): ?>
+              <?php echo $berita['isi_id'] ?>
+              <?php else: ?>
+              <?php echo $berita['isi'] ?>
+              <?php endif ?>
             </div>
             <div class="card-footer">
               <?=lang('Global.comUpdated')?>: <?php echo $berita['nama'] ?> | <?=lang('Global.comDate')?>: <?php echo getLang() == "id" ? tanggal_bulan_menit($berita['tanggal']) : tanggal_bulan_menit_en($berita['tanggal']) ?>
