@@ -16,9 +16,8 @@ class Organisasi extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate([
             'id' => 'required',
 			'gambar'	 		=> [
-                'uploaded[gambar]',
                 'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-                'max_size[gambar,4096]',
+                'max_size[gambar,200000]',
             ],
     	])) {
 			// Image upload

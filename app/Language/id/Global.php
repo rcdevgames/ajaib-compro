@@ -6,7 +6,7 @@ return [
    'menuProfile' => 'PROFIL',
    'menuInformation' => 'PUSAT INFORMASI',
    'menuProject' => 'PROYEK',
-   'menuClient' => 'KLIEN KAMI',
+   'menuClient' => 'PELANGGAN & PROSPEK KITA',
    'menuContact' => 'KONTAK',
    'menuTeam' => 'TIM MANAJEMEN',
    'menuNews' => 'BERITA',

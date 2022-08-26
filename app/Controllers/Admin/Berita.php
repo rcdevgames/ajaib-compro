@@ -107,7 +107,7 @@ class Berita extends BaseController
 				'judul_berita' 	=> 'required',
 				'gambar'	 	=> [
 					                'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-					                'max_size[gambar,4096]',
+					                'max_size[gambar,200000]',
             					],
         	])) {
 			if(!empty($_FILES['gambar']['name'])) {
@@ -188,7 +188,7 @@ class Berita extends BaseController
 				'judul_berita' 	=> 'required',
 				'gambar'	 	=> [
 					                'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-					                'max_size[gambar,4096]',
+					                'max_size[gambar,200000]',
             					],
         	])) {
 			if(!empty($_FILES['gambar']['name'])) {

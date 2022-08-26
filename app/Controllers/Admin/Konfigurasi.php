@@ -101,9 +101,8 @@ class Konfigurasi extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate([
 			'id_konfigurasi' => 'required',
 			'logo'	 		=> [
-                'uploaded[logo]',
                 'mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]',
-                'max_size[logo,4096]',
+                'max_size[logo,200000]',
             ],
 		])) {
 			// Image upload
@@ -145,9 +144,8 @@ class Konfigurasi extends BaseController
 		if($this->request->getMethod() === 'post' && $this->validate([
 			'id_konfigurasi' => 'required',
 			'icon'	 		=> [
-                'uploaded[icon]',
                 'mime_in[icon,image/jpg,image/jpeg,image/gif,image/png]',
-                'max_size[icon,4096]',
+                'max_size[icon,200000]',
             ],
 		])) {
 			// Image upload

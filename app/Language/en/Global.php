@@ -6,7 +6,7 @@ return [
    'menuProfile' => 'PROFILE',
    'menuInformation' => 'INFORMATION CENTER',
    'menuProject' => 'PROJECT',
-   'menuClient' => 'OUR CLIENT',
+   'menuClient' => 'OUR CUSTOMERS & PROSPECTS',
    'menuContact' => 'CONTACT US',
    'menuTeam' => 'MANAGEMENT',
    'menuNews' => 'NEWS',
