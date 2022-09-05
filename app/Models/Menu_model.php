@@ -42,7 +42,7 @@ class Menu_model extends Model
     public function layanan()
     {
         $builder = $this->db->table('berita');
-        $builder->select('berita.judul_berita, berita.judul_berita_id, berita.icon, berita.ringkasan, berita.ringkasan_id, berita.gambar, berita.slug_berita, berita.id_berita');
+        $builder->select('berita.judul_berita, berita.judul_berita_id, berita.icon, berita.ringkasan, berita.ringkasan_id, berita.gambar, berita.slug_berita, berita.id_berita, berita.gambar');
         $builder->where(array('status_berita'    => 'Publish','jenis_berita' => 'Layanan'));
         $query = $builder->get();
         return $query->getResultArray();

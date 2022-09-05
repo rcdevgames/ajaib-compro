@@ -55,7 +55,7 @@ class Download extends BaseController
 					'judul_download_id'		=> $this->request->getVar('judul_download_id'),
 					'jenis_download'		=> $this->request->getVar('jenis_download'),
 					'isi'					=> $this->request->getVar('isi'),
-					'isi_id'					=> $this->request->getVar('isi_id'),
+					'isi_id'				=> $this->request->getVar('isi_id'),
 					'gambar' 				=> $namabaru,
 					'website'				=> $this->request->getVar('website'),
 					'tanggal_post'			=> date('Y-m-d H:i:s')
@@ -70,7 +70,7 @@ class Download extends BaseController
 					'judul_download_id'		=> $this->request->getVar('judul_download_id'),
 					'jenis_download'		=> $this->request->getVar('jenis_download'),
 					'isi'					=> $this->request->getVar('isi'),
-Iure consectetur au->request->getVar('isi_id'),
+					'isi_id'				=> $this->request->getVar('isi_id'),
 					'website'				=> $this->request->getVar('website'),
 					'tanggal_post'			=> date('Y-m-d H:i:s')
 	        	);

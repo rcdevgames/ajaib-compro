@@ -15,7 +15,8 @@ $layanan      = $menu->layanan();
       <div class="carousel-inner" role="listbox">
         <?php $noslide=1; foreach($slider as $slider) {  ?>
         <!-- Slide 1 -->
-        <div class="carousel-item<?php if($noslide==1) { echo ' active'; } ?>" style="background-image: url(<?php echo base_url('assets/upload/image/'.$slider['gambar']) ?>)">
+        <div class="carousel-item<?php if($noslide==1) { echo ' active'; } ?>" style="background-color: white;align-items: center;">
+          <img src="<?php echo base_url('assets/upload/image/'.$slider['gambar']) ?>"/>
         </div>
         <?php $noslide++;} ?>
 
@@ -96,12 +97,31 @@ $layanan      = $menu->layanan();
           <h2>Proyek Kami</h2>
         </div>
 
-        <div class="row">
+        <div class="row mt-5">
           <?php $ml = 1; foreach($layanan as $layanan) { ?>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="<?php echo $ml; ?>00">
-            <div class="icon"><i class="<?php echo $layanan['icon'] ?>"></i></div>
-            <h4 class="title"><a href="<?php echo base_url('berita/proyek/'.$layanan['slug_berita']) ?>"><?php echo $layanan['judul_berita'] ?></a></h4>
-            <p class="description"><?php echo $layanan['ringkasan'] ?></p>
+          <div class="col-md-4">
+            <div class="card" style="margin-bottom: 20px;">
+              <img src="<?php echo base_url('assets/upload/image/'.$layanan['gambar']) ?>">
+              <div class="card-body">
+                <?php if (getLang() == "id"): ?>
+                  <h3><?php echo $layanan['judul_berita_id'] ?></h3>
+                <?php else: ?>
+                  <h3><?php echo $layanan['judul_berita'] ?></h3>
+                <?php endif ?>
+                <p class="card-text">
+                  <?php if (getLang() == "id"): ?>
+                  <?php echo $layanan['ringkasan_id'] ?>
+                  <?php else: ?>
+                  <?php echo $layanan['ringkasan'] ?>
+                  <?php endif ?>
+                </p>
+                <p>
+                  <a href="<?php echo base_url('berita/proyek/'.$layanan['slug_berita']) ?>" class="btn btn-sm btn-success">
+                    <i class="fa fa-chevron-right"></i>  <?=ucfirst(strtolower(lang('Global.newsBtnRead')))?>
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
           <?php $ml++; } ?>
         </div>
