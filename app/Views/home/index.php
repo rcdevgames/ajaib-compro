@@ -16,7 +16,7 @@ $layanan      = $menu->layanan();
         <?php $noslide=1; foreach($slider as $slider) {  ?>
         <!-- Slide 1 -->
         <div class="carousel-item<?php if($noslide==1) { echo ' active'; } ?>" style="background-color: white;align-items: center;">
-          <img src="<?php echo base_url('assets/upload/image/'.$slider['gambar']) ?>"/>
+          <img src="<?php echo base_url('assets/upload/image/'.$slider['gambar']) ?>" style="width: 100%;object-fit: cover;"/>
         </div>
         <?php $noslide++;} ?>
 

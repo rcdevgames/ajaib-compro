@@ -419,6 +419,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(60, 60, 60, 0.8);
   overflow: hidden;
   position: relative;
+  margin-top: 15vh;
 }
 
 #hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
@@ -551,7 +552,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   #hero {
-    height: 100vh;
+    height: 45vh;
   }
   #hero .container {
     margin-top: 100px;
